@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It is A small ReactJS Web app for birthday remmber 
 
 ## Available Scripts
 
