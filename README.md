@@ -1,6 +1,10 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<<<<<<< HEAD
+=======
+It is A small ReactJS Web app for birthday remmber tool 
+>>>>>>> ca489c1b018ab41c6e15435e6816a8877a748041
 
 ## Available Scripts
 
@@ -45,6 +49,10 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ca489c1b018ab41c6e15435e6816a8877a748041
 ### Code Splitting
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
@@ -69,4 +77,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+<<<<<<< HEAD
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+=======
+![alt text](https://github.com/Kasse-Dembele/ReactJs-Birthday-Remember/blob/main/Capture%20d%E2%80%99%C3%A9cran%20du%202021-12-20%2015-56-41.png)
+>>>>>>> ca489c1b018ab41c6e15435e6816a8877a748041

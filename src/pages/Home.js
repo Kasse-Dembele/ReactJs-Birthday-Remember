@@ -7,6 +7,7 @@ import { BsPersonPlus, } from "react-icons/bs";
 import { Link } from 'react-router-dom'
 const Home = ({people,clearAll}) => {
 
+
     return (
         <main>
           <section className="container">
