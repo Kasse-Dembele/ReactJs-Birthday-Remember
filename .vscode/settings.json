@@ -1,5 +1,12 @@
 {
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
+    },
+    "yaml.schemas": {
+        "https://json.schemastore.org/composer": [
+            "/*"
+        ],
+        "kubernetes": "/*.yml",
+        "https://gitlab.com/appsemble/appsemble/-/raw/HEAD/packages/cli/assets/appsemblerc.schema.json": "file:///home/kasse/react-projects/birthday-remember/.github/workflows/main.yml"
     }
 }
