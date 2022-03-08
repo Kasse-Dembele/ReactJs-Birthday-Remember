@@ -1,0 +1,21 @@
+{
+  "core": {
+    "workingDir": ".reg",
+    "actualDir": "actualDir",
+    "thresholdRate": 0,
+    "ximgdiff": {
+      "invocationType": "client"
+    }
+  },
+  "plugins": {
+    "reg-keygen-git-hash-plugin": true,
+    "reg-simple-keygen-plugin": true,
+    
+    "reg-notify-github-with-api-plugin": {
+      "githubUrl": "https://github.com",
+      "owner": "Kasse-Dembele",
+      "repository": "ReactJs-Birthday-Remember",
+      "privateToken": "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"
+    }
+  }
+}
