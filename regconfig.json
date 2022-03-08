@@ -10,16 +10,8 @@
   "plugins": {
     "reg-keygen-git-hash-plugin": true,
     "reg-simple-keygen-plugin": true,
-    "reg-notify-github-plugin": {
-      "prComment": true,
-      "prCommentBehavior": "default",
-      "clientId": "MzExMDIEIjP9oNTE5BKvYl2nzKKSjJTESt2g1NzU3KTUIn0jY0tjIzNTS33vxOLiVF0XkGhOKgA="
-    },
-    "reg-notify-github-with-api-plugin": {
-      "githubUrl": "https://github.com",
-      "owner": "Kasse-Dembele",
-      "repository": "ReactJs-Birthday-Remember",
-      "privateToken": "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"
+    "reg-notify-slack-plugin": {
+      "webhookUrl": "https://app.slack.com/client/T03602V6NHL/C0363QYRF29"
     }
   }
 }

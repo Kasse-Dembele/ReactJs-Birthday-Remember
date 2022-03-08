@@ -12814,6 +12814,14 @@ reg-notify-github-with-api-plugin@^0.11.2:
     reg-suit-util "^0.11.0"
     tiny-commit-walker "^1.2.1"
 
+reg-notify-slack-plugin@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/reg-notify-slack-plugin/-/reg-notify-slack-plugin-0.11.0.tgz#1bc77c173bf20dc2a7c280508ed4adcfe7bbbb56"
+  integrity sha512-g+cMznz2DV+U2p1IjCf5XgZ/rXdDcedDun3zfTB/fR0ZyivYBO5bHLi0wAaDIBNyOi3KAvGt9UbLkT7shMZ4Og==
+  dependencies:
+    request "^2.88.2"
+    request-promise "^4.2.6"
+
 reg-simple-keygen-plugin@^0.11.0:
   version "0.11.0"
   resolved "https://registry.npmjs.org/reg-simple-keygen-plugin/-/reg-simple-keygen-plugin-0.11.0.tgz"
