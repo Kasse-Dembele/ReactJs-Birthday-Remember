@@ -67,7 +67,7 @@
     "@storybook/testing-library": "^0.0.9",
     "reg-keygen-git-hash-plugin": "^0.7.1",
     "reg-notify-github-plugin": "^0.7.1",
-    "reg-notify-github-with-api-plugin": "^0.7.2",
+    
     "reg-simple-keygen-plugin": "^0.7.0",
     "reg-suit": "^0.7.0",
     "storycap": "^3.1.5",
