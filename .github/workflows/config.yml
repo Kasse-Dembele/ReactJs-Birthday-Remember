@@ -1,24 +1,22 @@
-version: 2
+on: [push]
+
 jobs:
   build:
-    docker:
-      - image: regviz/node-xcb
-
-    working_directory: ~/repo
-
+    runs-on: ubuntu-latest
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
-          - v1-dependencies-
-
-      - run: yarn
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
-
-      - run: yarn screenshot
-      - run: yarn regression
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js v10
+        uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+      - name: npm install, build, and test
+        run: |
+          npm i
+      - name: workaround for detached HEAD
+        run: |
+          git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+      - name: run reg-suit
+        run: |
+          npx reg-suit run
