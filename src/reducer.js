@@ -1,4 +1,5 @@
 
+
 const reducer = (state,action) => {
     switch (action.id) {
         case 'CLEAR_ALL':
