@@ -29,7 +29,7 @@ Secondary.args = {
 
 export const Large = Template.bind({});
 Large.args = {
-  size: 'medium',
+  size: 'small',
   label: 'Button',
 };
 
