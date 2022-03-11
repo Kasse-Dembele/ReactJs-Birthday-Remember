@@ -1,30 +1,30 @@
-on: [push]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Use Node.js v14
-        uses: actions/setup-node@v1
-        with:
-          node-version: "14.x"
-      - name: npm install, build, and test
-        run: |
-          npm i
-      - name: workaround for detached HEAD
-        run: |
-          git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
-      - name: build storybook
-        run: |
-          npm run build-storybook
-      - name: capture with storycap
-        run: |
-          npx storycap --serverCmd "npx http-server storybook-static -p 9001" http://localhost:9001 -o "actualDir" --chromiumChannel "puppeteer"
-      - name: run reg-suit
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
-          npx reg-suit run
+# on: [push]
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#         with:
+#           fetch-depth: 0
+#       - name: Use Node.js v14
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: "14.x"
+#       - name: npm install, build, and test
+#         run: |
+#           npm i
+#       - name: workaround for detached HEAD
+#         run: |
+#           git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+#       - name: build storybook
+#         run: |
+#           npm run build-storybook
+#       - name: capture with storycap
+#         run: |
+#           npx storycap --serverCmd "npx http-server storybook-static -p 9001" http://localhost:9001 -o "actualDir" --chromiumChannel "puppeteer"
+#       - name: run reg-suit
+#         env:
+#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#         run: |
+#           npx reg-suit run
