@@ -2,7 +2,7 @@
   "core": {
     "workingDir": ".reg",
     "actualDir": "actualDir",
-    "thresholdRate": 0.005,
+    "thresholdRate": 0.05,
     "ximgdiff": {
       "invocationType": "client"
     }
