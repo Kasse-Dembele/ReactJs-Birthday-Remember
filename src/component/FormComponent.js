@@ -11,7 +11,7 @@ const FormComponent = ({addUser}) => {
     const [name,setName] = useState('')
     const [lastName,setLastName] = useState('')
     const [age, setAge] = useState('');
-
+    console.log("Test");
     return (
         <body>
             
