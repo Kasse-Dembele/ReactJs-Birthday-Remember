@@ -21,7 +21,7 @@ jobs:
           npm run build-storybook
       - name: capture with storycap
         run: |
-          npx storycap --serverCmd "npx http-server storybook-static -p 9001" http://localhost:9001 -o "actualDir"
+          npx storycap --serverCmd "npx http-server storybook-static -p 9001" http://localhost:9001 -o "actualDir" --chromiumChannel "puppeteer"
       - name: run reg-suit
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
