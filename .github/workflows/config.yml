@@ -1,22 +1,22 @@
-# on: [push]
+on: [push]
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#         with:
-#           fetch-depth: 0
-#       - name: Use Node.js v14
-#         uses: actions/setup-node@v1
-#         with:
-#           node-version: "14.x"
-#       - name: npm install, build, and test
-#         run: |
-#           npm i
-#       - name: workaround for detached HEAD
-#         run: |
-#           git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
-#       - name: run reg-suit
-#         run: |
-#           npx reg-suit run
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js v14
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - name: npm install, build, and test
+        run: |
+          npm i
+      - name: workaround for detached HEAD
+        run: |
+          git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+      - name: run reg-suit
+        run: |
+          npx reg-suit run
