@@ -20,6 +20,7 @@ jobs:
           git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
       - name: run reg-suit
       
+      
         run: |
           npx reg-suit compare && npx reg-suit publish 
         env:
