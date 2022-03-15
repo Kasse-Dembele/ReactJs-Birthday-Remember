@@ -8,8 +8,6 @@
     }
   },
   "plugins": {
-    "reg-keygen-git-hash-plugin": true,
-    
     "reg-notify-github-plugin": {
       "prComment": true,
       "prCommentBehavior": "default",
@@ -23,6 +21,12 @@
         "endpoint": "fra1.digitaloceanspaces.com",
         "region": "fra1"
       }
+    },
+    "reg-simple-keygen-plugin": {
+      
+        "expectedKey": "main_snapshot",
+        "actualKey": "main_snapshot"
+      
     }
   }
 }
