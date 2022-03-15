@@ -22,11 +22,7 @@
         "region": "fra1"
       }
     },
-    "reg-simple-keygen-plugin": {
-      
-        "expectedKey": "main_snapshot",
-        "actualKey": "main_snapshot"
-      
-    }
+    "reg-keygen-git-hash-plugin": true
+    
   }
 }
