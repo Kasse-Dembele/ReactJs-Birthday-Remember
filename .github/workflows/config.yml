@@ -31,7 +31,7 @@ jobs:
        
       - name: Copy
         run: |
-          cp -r actualDir/ .reg/expected
+          cp -r actualDir/* .reg/expected
       - name: run reg-suit
       
       
