@@ -20,6 +20,7 @@ jobs:
         run: |
           git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
 
+
       - name: Build storybook
         run: |
           yarn build-storybook
