@@ -19,6 +19,16 @@ jobs:
       - name: workaround for detached HEAD
         run: |
           git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+
+      - name: Build storybook
+        run: |
+          yarn build-storybook
+        
+      - name: Capture with storycap
+        run: |
+          npx storycap --serverCmd "npx http-server storybook-static -p 9001" http://localhost:9001 -o "actualDir" --disableCssAnimation  --parallel 12
+       
+
       - name: Copy
         run: |
           cp -r actualDir/ .reg/expected
