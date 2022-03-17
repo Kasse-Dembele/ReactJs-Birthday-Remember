@@ -29,15 +29,14 @@ jobs:
         run: |
           npx storycap --serverCmd "npx http-server storybook-static -p 9001" http://localhost:9001 -o "actualDir" --disableCssAnimation  --parallel 12
        
-      - name: Copy
-        run: |
-           cp -r actualDir/* .reg/expected
-           
+      # - name: Copy
+      #   run: |
+      #     cp -r actualDir/* .reg/expected
       - name: run reg-suit
       
       
         run: |
-          npx reg-suit compare && npx reg-suit publish -n
+          npx reg-suit run
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
