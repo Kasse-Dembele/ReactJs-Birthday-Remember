@@ -17,6 +17,7 @@
     },
     "reg-publish-s3-plugin": {
       "bucketName": "ublo-report",
+
       "customDomain": "ublo-report.fra1.digitaloceanspaces.com",
       "pathPrefix": "test",
       "sdkOptions": {
