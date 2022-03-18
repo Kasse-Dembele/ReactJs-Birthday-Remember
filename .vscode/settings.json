@@ -3,10 +3,17 @@
         "javascript": "javascriptreact"
     },
     "yaml.schemas": {
+        "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-playbook.json": "*playbook*.yml",
+        "https://json.schemastore.org/github-workflow-template-properties.json": "*workflow*.yml",
+        "kubernetes": "/*.yml",
+        "https://json.schemastore.org/traefik-v2.json": [
+            "traefik*.yml",
+            "conft.yml"
+        ],
         "https://json.schemastore.org/composer": [
             "/*"
         ],
-        "kubernetes": "/*.yml",
-        "https://gitlab.com/appsemble/appsemble/-/raw/HEAD/packages/cli/assets/appsemblerc.schema.json": "file:///home/kasse/react-projects/birthday-remember/.github/workflows/main.yml"
+        "https://gitlab.com/appsemble/appsemble/-/raw/HEAD/packages/cli/assets/appsemblerc.schema.json": "file:///home/kasse/react-projects/birthday-remember/.github/workflows/main.yml",
+        "https://json.schemastore.org/github-action.json": "file:///home/kasse/react-projects/birthday-remember/.github/workflows/config.yml"
     }
 }
