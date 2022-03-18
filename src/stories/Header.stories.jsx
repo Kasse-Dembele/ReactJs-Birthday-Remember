@@ -16,7 +16,9 @@ const Template = (args) => <Header {...args} />;
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
   user: {
+
     name: 'Jae Doe',
+
   },
 };
 
