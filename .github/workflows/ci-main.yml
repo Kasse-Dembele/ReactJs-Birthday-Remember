@@ -1,0 +1,33 @@
+on: 
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run: 
+        working-directory: ./my-tools
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          path: main
+
+      - uses: actions/checkout@v2
+        with:
+          repository: 'Kasse-Dembele/RIWA'
+          ref: 'main'
+          token: ${{ secrets.GH_TOKEN }} 
+          path: my-tools
+
+      - name:  create test
+        run:  echo "testsf" >> create.js
+      - name: add and commit
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add . && git commit -m "initial gitops"
+      - name: 
+        run: git push origin main
